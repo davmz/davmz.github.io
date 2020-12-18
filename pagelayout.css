@@ -1,0 +1,49 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body
+{
+    background-color: black;
+    color: white;
+}
+
+h1
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 50x;
+}
+
+.link
+{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.link:hover
+{
+    color: rgb(46, 46, 236);
+}
+
+footer
+{
+    background-color: #333333;
+    color: #ffffff;
+    padding:  40px 0 40px 0;
+}
+
+.social_media
+{
+    background-color: orange;
+    padding-left: 100px;
+}
+
+section
+{
+    display: flex;
+}
