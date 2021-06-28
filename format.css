@@ -15,13 +15,14 @@ html, body
 {
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
+    background-color: #EEE;
+    width: 360px;
+    height: 740px;
 }
 
 #heroContent
 {
-    background-color: #EEE;
-    width: 360px;
-    height: 760px;
+
 }
 
     header
