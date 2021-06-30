@@ -118,6 +118,11 @@ html, body
         height: 76vh;
     }
 
+        #content
+        {
+            color: white;
+        }
+
     footer
     {
         padding: 10px 0;
