@@ -16,13 +16,17 @@ html, body
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
     background-color: #EEE;
-    width: 360px;
-    height: 740px;
+    overflow-x: hidden;
 }
 
 #heroContent
 {
-
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://i.pinimg.com/originals/1b/06/72/1b06721be7fd03e8c8174318ef615ba4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
     header
@@ -30,10 +34,141 @@ html, body
 
     }
 
+        nav
+        {
+            display: flex;
+            min-height: 10vh;
+            align-items: center;
+            background-color: #131d3a0c;
+            justify-content: center;
+        }
+
+            #logo
+            {
+                font-size: 18px;
+                margin: 0 15px 0 45px;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+            }
+
+                #logo h1
+                {
+                    color: #EEE;
+                }
+
+            .navList
+            {
+                top: 10vh;
+                right: 0px;
+                height: 90vh;
+                position: absolute;
+                background-color: #b1b1b1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+
+                /* Set a random background image for cooler effect each time menu is clicked */
+                background-image: url("https://i0.wp.com/cdn.statically.io/img/data.whicdn.com/images/326524746/original.gif");
+
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                /* opacity: 0.7; */
+            }
+
+                .navList li
+                {
+                    /* opacity: 0; */
+                    width: 100%;
+                    text-align: center;
+                    padding: 20px 30px;
+                    list-style: none;
+                    border: 1px solid orange;
+                }
+
+                    .navList li a
+                    {
+                        border: 1px solid white;
+                        color: black;
+                        text-decoration: none;
+                    }
+
+            /* 
+                Hamburger Menu
+             */
+            .burger
+            {
+                display: block;
+                cursor: pointer;
+            }
+
+                .burger div
+                {   
+                    width: 25px;
+                    height: 3px;
+                    margin: 4px;
+                    background-color: white;
+                }
+
+    section
+    {
+        height: 76vh;
+    }
+
     footer
     {
-
+        padding: 10px 0;
+        height: 14vh;
+        /* background-color: red; */
+        color: white;
     }
+
+        #copyRight
+        {
+            margin: 0 auto;
+            text-align: center;
+            font-size: 15px;
+            width: 210px;
+        }
+
+        #socialMedia
+        {
+            margin-top: 14px;
+        }
+
+            #socialMedia ul
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* border: 1px solid orange; */
+            }
+
+                #socialMedia ul li
+                {
+                    list-style: none;
+                    padding: 0 12px;
+                }
+
+                    #socialMedia ul li a
+                    {
+                        text-decoration: none;
+                    }
+
+                    #socialMedia ul li a i
+                    {
+                        color: white;
+                        font-size: 20px;
+                    }
+
+.navActive
+{
+    display: flex;
+    transform: translateX(0%);
+}
 
 /* 
     Reason: Extra small devices (phones, 600px and down)
@@ -41,4 +176,12 @@ html, body
 @media only screen and (max-width: 600px)
 {
     
+}
+
+/* 
+    Extra large devices (large laptops and desktops, 1200px and up)
+ */
+@media only screen and (min-width: 1200px)
+{
+
 }
