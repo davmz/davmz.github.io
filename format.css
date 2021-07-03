@@ -15,15 +15,310 @@ html, body
 {
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
-    background-color: #EEE;
+    background-color: #303030;
     overflow-x: hidden;
 }
 
 #heroContent
 {
+    background-image: url("https://i.pinimg.com/originals/1b/06/72/1b06721be7fd03e8c8174318ef615ba4.jpg");
+}
+
+    header
+    {
+        height: 8vh;
+    }
+
+        #navBar
+        {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4e5977;
+            padding: 1rem 10rem;
+            z-index: 1;
+        }
+
+            #logo
+            {
+                cursor: context-menu;
+                color: white;
+                font-size: 1.5rem;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+            }
+
+        /* Burger Menu */
+        .menuBtn
+        {
+            position: relative;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+            .menuBtn__lines, .menuBtn__lines::before, .menuBtn__lines::after
+            {
+                width: 1.5rem;
+                height: 0.2rem;
+                background-color: white;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .menuBtn__lines::before, .menuBtn__lines::after
+            {
+                content: "";
+                position: absolute;
+            }
+
+            .menuBtn__lines::before
+            {
+                transform: translateY(-0.5rem);
+            }
+            
+            .menuBtn__lines::after
+            {
+                transform: translateY(0.5rem);
+            }
+
+            /* Burger Menu Animation */
+            .menuBtn.open .menuBtn__lines
+            {
+                /* transform: translateX(2rem); */
+                background-color: transparent;
+            }
+
+            .menuBtn.open .menuBtn__lines::before
+            {
+                transform: rotate(45deg);
+                background-color: #ffffff;
+            }
+
+            .menuBtn.open .menuBtn__lines::after
+            {
+                transform: rotate(-45deg);
+                background-color: #ffffff;
+            }
+
+        #navList
+        {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            #navList li
+            {
+
+            }
+
+                #navList li a
+                {
+                    letter-spacing: 2px;
+                    font-weight: 500;
+                    font-size: 1.05rem;
+                    padding: 0.5em 1em;
+                    text-decoration: none;
+                    color: white;
+                    transition: background 0.3s ease-in;
+                }
+
+                #navList li a:hover
+                {
+                    background-color: #8092C3;
+                }
+
+    section
+    {
+        position: relative;
+        height: 82vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroSection
+    {
+        background-color: #dfdbe5;
+        /* background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+    }
+
+        #content
+        {
+            padding: 40px 40px 40px 0;
+            max-width: 50%;
+        }
+
+            #content h1
+            {
+                line-height: 3vw;
+                font-size: clamp(60px, 8vw, 200px);
+                font-weight: 700;
+                color: #CCC7D3;
+                cursor: context-menu;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+                #content h2
+                {
+                    color: black;
+                }
+
+                    #content h2 span
+                    {
+                        color: #CCC7D3;
+                    }
+
+            #content p
+            {
+                margin: 10px 0 0 0;
+                color: #5A4D70;
+                padding-right: 1rem;
+                cursor: context-menu;
+            }
+
+                #content p span
+                {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: rgb(19, 0, 63);
+                }
+
+                #content p span a
+                {
+                    text-decoration: none;
+                    color: orange;
+                }
+
+                #content p i
+                {
+                    font-weight: 600;
+                    color: cyan;
+                }
+
+    footer
+    {
+        background-color: #4e5977;
+        padding: 0 3em;
+        height: 10vh;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        #copyRight
+        {
+            /* line-height: 3vw; */
+            font-size: clamp(8px, 8vw, 17px);
+            width: 230px;
+            color: white;
+            background-color: red;
+        }
+
+        #socialMedia
+        {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            #socialMedia li a
+            {
+                color: white;
+                padding: 0.5em 0.8em;
+                font-size: 1.5rem;
+                transition: 0.3s all;
+            }
+
+            #socialMedia li a:hover
+            {
+                text-shadow: 3px 3px 15px #414141;
+            }
+
+/* 
+    Reason: Extra small devices (phones, 600px and down)
+ */
+@media only screen and (max-width: 760px)
+{
+    header
+    {
+        /* height: 8vh; */
+    }
+
+        #logo
+        {
+            font-size: 1rem;
+        }
+
+        .menuBtn
+        {
+            display: flex;
+        }
+
+        #navList
+        {
+            flex-direction: column;
+            justify-content: space-around;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 100vh;
+            transform: translateX(100vw);
+            background-color: #5A4D70;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        #navList.open
+        {
+            transform: translateX(0);
+        }
+
+            #navList li
+            {
+                width: 100vw;
+                height: 100%;
+            }
+
+                #navList li a
+                {
+                    font-size: 5vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                }
+
+   #content
+   {
+       /* background-color: red; */
+       max-width: 100%;
+       width: clamp(300px, 50vw, 600px);
+   }
+   
+        #copyRight
+        {
+            /* transition: 0.5s ease-in-out; */
+            max-width: 30%;
+            font-size: clamp(8px, 8vw, 14px);
+        }
+}
+
+/* #heroContent
+{
     width: 100vw;
     height: 100vh;
-    /* background-color: rgb(0, 10, 54); */
+    background-color: rgb(0, 10, 54);
     background-image: url("https://i.pinimg.com/originals/1b/06/72/1b06721be7fd03e8c8174318ef615ba4.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -71,18 +366,15 @@ html, body
                 transform: translateX(100%);
                 transition: transform 0.5s ease-in;
 
-                /* Set a random background image for cooler effect each time menu is clicked */
                 background-image: url("https://i0.wp.com/cdn.statically.io/img/data.whicdn.com/images/326524746/original.gif");
 
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
-                /* opacity: 0.7; */
             }
 
                 .navList li
                 {
-                    /* opacity: 0; */
                     width: 100%;
                     text-align: center;
                     padding: 20px 30px;
@@ -97,9 +389,6 @@ html, body
                         text-decoration: none;
                     }
 
-            /* 
-                Hamburger Menu
-             */
             .burger
             {
                 display: block;
@@ -116,7 +405,6 @@ html, body
 
     section
     {
-        /* background-color: red; */
         padding: 100px 20px;
         height: 74vh;
         text-align: center;
@@ -124,9 +412,7 @@ html, body
 
         #content
         {
-            /* height: 100%; */
             padding: 75px 0;
-            /* background-color: orange; */
             color: white;
             background-color: rgba(78, 78, 78, 0.315);
             text-shadow: 1px 2px 1px black;
@@ -150,7 +436,6 @@ html, body
             #content p
             {
                 font-size: 15px;
-                /* background-color: pink; */
                 padding: 12px 18px;
                 font-weight: 500;
                 margin-top: 15px;
@@ -176,7 +461,6 @@ html, body
     {
         padding: 15px 0;
         height: 16vh;
-        /* background-color: red; */
         color: white;
     }
 
@@ -198,7 +482,6 @@ html, body
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                /* border: 1px solid orange; */
             }
 
                 #socialMedia ul li
@@ -222,15 +505,7 @@ html, body
 {
     display: flex;
     transform: translateX(0%);
-}
-
-/* 
-    Reason: Extra small devices (phones, 600px and down)
- */
-@media only screen and (max-width: 600px)
-{
-    
-}
+}*/
 
 /* 
     Extra large devices (large laptops and desktops, 1200px and up)
