@@ -2,11 +2,14 @@
  * Name: David Montañez
  * Project: Personal Website
  * Created: June 28, 2021
- * Updated: June 28, 2021   
+ * Updated: July 4, 2021   
  */
 
 document.addEventListener("DOMContentLoaded", load);
 
+/**
+ * 
+ */
 function load()
 {
     navSlide(); /* Sets menu bar animation */
@@ -41,24 +44,6 @@ function navSlide()
         {
             menuItems.classList.toggle(`${background[randomClass]}`);
         }
-
-        // var images =
-        // [
-        //     './menuJapanBG.gif',
-        //     './menuJapanBG2.gif',
-        //     './menuJapanBG3.gif',
-        //     './menuSpaceBG4.gif',
-        //     './menuSpaceBG5.gif',
-        //     './menuOPMerryBG6.gif',
-        // ];
-
-        // var mediaQuery = window.matchMedia("(max-width: 768px)");
-        // var randomImage = Math.floor(Math.random() * images.length);
-
-        // if(!mediaQuery.matches)
-        // {
-        //     document.getElementById("navList").style.backgroundImage = 'url(' + images[randomImage] + ')';
-        // }
 
         toggle();
     });

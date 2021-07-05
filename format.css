@@ -323,7 +323,7 @@ html, body
                 left: 0;
                 height: 90vh;
                 transform: translateX(100vw);
-                background-image: url(./menuJapanBG.gif);
+                background-image: url(./Images/menuJapanBG.gif);
                 background-size: cover;
                 background-repeat: no-repeat;
                 transition: transform 0.6s ease-in-out;
@@ -332,27 +332,27 @@ html, body
                 /* Randomized Menu Background Image */
                 #navList.bg2
                 {
-                    background-image: url(./menuJapanBG2.gif);
+                    background-image: url(./Images/menuJapanBG2.gif);
                 }
 
                 #navList.bg3
                 {
-                    background-image: url(./menuJapanBG3.gif);
+                    background-image: url(./Images/menuJapanBG3.gif);
                 }
 
                 #navList.bg4
                 {
-                    background-image: url(./menuSpaceBG4.gif);
+                    background-image: url(./Images/menuSpaceBG4.gif);
                 }
 
                 #navList.bg5
                 {
-                    background-image: url(./menuSpaceBG5.gif);
+                    background-image: url(./Images/menuSpaceBG5.gif);
                 }
 
                 #navList.bg6
                 {
-                    background-image: url(./menuOPMerryBG6.gif);
+                    background-image: url(./Images/menuOPMerryBG6.gif);
                 }
 
             /* Menu Open Animation */
