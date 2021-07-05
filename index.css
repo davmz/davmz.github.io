@@ -1,0 +1,91 @@
+section
+{
+    position: relative;
+    height: 82vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dfdbe5;
+}
+
+    #content
+    {
+        padding: 40px 40px 40px 0;
+        max-width: 50%;
+    }
+
+        #content h1
+        {
+            line-height: 3vw;
+            font-size: clamp(60px, 8vw, 200px);
+            font-weight: 700;
+            color: #CCC7D3;
+            cursor: context-menu;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+            #content h2
+            {
+                color: black;
+            }
+
+                #content h2 #wave
+                {
+                    animation-name: wave-animation;
+                    animation-duration: 3.2s;        
+                    animation-iteration-count: infinite;  
+                    transform-origin: 70% 80%;       
+                    display: inline-block;
+                }
+
+        #content p
+        {
+            margin: 10px 0 0 0;
+            color: #5A4D70;
+            padding-right: 1rem;
+            cursor: context-menu;
+        }
+
+            #content p span
+            {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: rgb(19, 0, 63);
+            }
+
+            #content p span a
+            {
+                text-decoration: none;
+                color: orange;
+            }
+
+            #content p i
+            {
+                font-weight: 600;
+                color: cyan;
+            }
+
+@media only screen and (max-width: 768px)
+{
+    #content
+    {
+        max-width: 100%;
+        width: clamp(300px, 50vw, 600px);
+    }
+}
+
+/* 
+    Wave Emoji Wave Animation
+ */
+@keyframes wave-animation
+{
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }  
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  
+    100% { transform: rotate( 0.0deg) }
+}
