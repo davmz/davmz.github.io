@@ -1,10 +1,10 @@
 section
 {
-    position: relative;
     height: 82vh;
     display: flex;
-    justify-content: center;
+    position: relative;
     align-items: center;
+    justify-content: center;
     background-color: #dfdbe5;
 }
 
@@ -17,12 +17,13 @@ section
         #content h1
         {
             line-height: 3vw;
-            font-size: clamp(60px, 8vw, 200px);
             font-weight: 700;
             color: #CCC7D3;
+            letter-spacing: 5px;
             cursor: context-menu;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            font-size: clamp(60px, 8vw, 200px);
+
         }
 
             #content h2
@@ -32,38 +33,38 @@ section
 
                 #content h2 #wave
                 {
-                    animation-name: wave-animation;
-                    animation-duration: 3.2s;        
-                    animation-iteration-count: infinite;  
-                    transform-origin: 70% 80%;       
                     display: inline-block;
+                    animation-duration: 3.2s;        
+                    transform-origin: 70% 80%;       
+                    animation-name: wave-animation;
+                    animation-iteration-count: infinite;  
                 }
 
         #content p
         {
-            margin: 10px 0 0 0;
             color: #5A4D70;
+            margin: 10px 0 0 0;
             padding-right: 1rem;
             cursor: context-menu;
         }
 
             #content p span
             {
-                font-size: 1.2rem;
                 font-weight: 600;
+                font-size: 1.2rem;
                 color: rgb(19, 0, 63);
             }
 
             #content p span a
             {
-                text-decoration: none;
                 color: orange;
+                text-decoration: none;
             }
 
             #content p i
             {
-                font-weight: 600;
                 color: cyan;
+                font-weight: 600;
             }
 
 @media only screen and (max-width: 768px)
