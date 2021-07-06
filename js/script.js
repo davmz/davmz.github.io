@@ -12,8 +12,11 @@ document.addEventListener("DOMContentLoaded", load);
  */
 function load()
 {
-    stickyNav();
-    navSlide(); /* Sets menu bar animation */
+    /* Sets nav sticky when scrolling */
+    stickyNav(); 
+
+    /* Sets menu bar animation */
+    navSlide(); 
 }
 
 /**

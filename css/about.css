@@ -1,21 +1,3 @@
-/* 
-    Reason: Import of Poppins Google Font
-    URL: https://fonts.google.com/specimen/Poppins
- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
-
-*
-{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html, body
-{
-    font-family: "Poppins", sans-serif;
-}
-
 header
 {
     position: fixed;
@@ -46,102 +28,9 @@ header
         justify-content: space-between;
     }
 
-        #logo
-        {
-            color: white;
-            font-size: 1.5rem;
-            letter-spacing: 5px;
-            cursor: context-menu;
-            text-transform: uppercase;
-        }
-
-        /* Burger Menu */
-        .menuBtn
-        {
-            z-index: 1;
-            display: none;
-            width: 1.5rem;
-            height: 1.5rem;
-            cursor: pointer;
-            position: relative;
-            align-items: center;
-            justify-content: center;
-        }
-
-            .menuBtn__lines, .menuBtn__lines::before, .menuBtn__lines::after
-            {
-                width: 1.5rem;
-                height: 0.2rem;
-                background-color: white;
-                transition: all 0.5s ease-in-out;
-            }
-
-            .menuBtn__lines::before, .menuBtn__lines::after
-            {
-                content: "";
-                position: absolute;
-            }
-
-            .menuBtn__lines::before
-            {
-                transform: translateY(-0.5rem);
-            }
-            
-            .menuBtn__lines::after
-            {
-                transform: translateY(0.5rem);
-            }
-
-            /* Burger Menu Animation */
-            .menuBtn.open .menuBtn__lines
-            {
-                background-color: transparent;
-            }
-
-            .menuBtn.open .menuBtn__lines::before
-            {
-                transform: rotate(45deg);
-                background-color: #ffffff;
-            }
-
-            .menuBtn.open .menuBtn__lines::after
-            {
-                transform: rotate(-45deg);
-                background-color: #ffffff;
-            }
-
-        #navList
-        {
-            display: flex;
-            list-style: none;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-            #navList li
-            {
-                list-style: none;
-            }
-
-                #navList li a
-                {
-                    color: white;
-                    font-weight: 500;
-                    font-size: 1.05rem;
-                    padding: 0.5em 1em;
-                    letter-spacing: 2px;
-                    text-decoration: none;
-                    transition: background 0.3s ease-in;
-                }
-
-                #navList li a:hover
-                {
-                    background-color: #8092C3;
-                }
-
 #contentAuthor
 {
-    padding: auto 0;
+    padding: clamp(30px, 10vw, 180px);
     width: 100vw;
     height: 100vh;
     background-image: url("../Images/indexBackground.jpg");
@@ -156,13 +45,14 @@ header
     {
         border: 12px solid white;
         border-radius: 50%;
-        height: 520px;
-        width: 520px;
+        width: clamp(200px, 30vw, 600px);
     }
 
-    #potraitInfo
+    #portraitInfo
     {
-        height: 20%;
+        /* font-size: clamp(18px, 2.5vw, 60px); */
+        padding-left: 1rem;
+        max-width: 50%;
         background-color: red;
     }
 
@@ -171,7 +61,6 @@ footer
     height: 10vh;
     display: flex;
     padding: 0 3em;
-    position: relative;
     align-items: center;
     background-color: #4e5977;
     justify-content: space-between;
@@ -209,3 +98,43 @@ footer
         {
             transform: scale(1.5);
         }
+
+@media only screen and (max-width: 992px)
+{
+        #portrait
+        {
+            display: none;
+        }
+
+        #portraitInfo
+        {
+            max-width: 100%;
+            /* width: clamp(500px, 21vw, 2rem); */
+            padding: 0;
+        }
+}
+
+/* Temporary */
+@media only screen and (max-width: 700px)
+{
+    footer
+    {
+        height: 10vh;
+        padding: 1vh 8vw;
+    }
+
+        #copyRight
+        {
+            max-width: 32%;
+        }
+
+            #copyRight p
+            {
+                font-size: 2vw;
+            }
+
+                #socialMedia li a
+                {
+                    font-size: 3.2vw;
+                }
+}

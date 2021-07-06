@@ -1,21 +1,38 @@
-#navBar
+header
 {
     position: fixed;
     top: 0;
+    left: 0;
+    display: flex;
+    background: transparent;
+    transition: background 0.5s ease-in;
+}
+
+/* Set Nav Sticky When Scrolling Down the Webpage */
+.scrollActive
+{
+    transition: 0.5s all;
+    background-color: #3d3d3d8f;
+}
+
+#navBar
+{
+    height: 10vh;
+    width: 100vw;
     z-index: 1;
     display: flex;
     position: relative;
     align-items: center;
     padding: 1.13vh 11.7vw;
-    background-color: #4e5977;
+    /* background-color: #4e5977; */
     justify-content: space-between;
 }
 
 section
 {
-    height: 80vh;
+    /* margin-top: 10vh; */
+    height: 100vh;
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
     background-color: #dfdbe5;
@@ -80,94 +97,46 @@ section
                 font-weight: 600;
             }
 
-footer
-{
-    height: 10vh;
-    display: flex;
-    padding: 0 3em;
-    position: relative;
-    align-items: center;
-    background-color: #4e5977;
-    justify-content: space-between;
-}
-
-    #copyRight
-    {
-        width: 230px;
-        color: white;
-        font-size: clamp(8px, 8vw, 17px);
-    }
-
-    #socialMedia
-    {
-        display: flex;
-        list-style: none;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-        #socialMedia li a
-        {
-            color: white;
-            font-size: 1.5rem;
-            padding: 0.5em 0.8em;
-            cursor: context-menu;
-        }
-
-            #social
-            {
-                transition: 0.3s all;
-            }
-
-            #social:hover
-            {
-                transform: scale(1.5);
-            }
-
-@media only screen and (max-width: 768px)
-{
-    #content
-    {
-        max-width: 100%;
-        width: clamp(300px, 50vw, 600px);
-    }
-}
-
-@media only screen and (max-width: 700px)
-{
     footer
     {
-        height: 10vh;
-        padding: 1vh 8vw;
+        height: 15vh;
+        display: flex;
+        padding: 0 3em;
+        position: relative;
+        align-items: center;
+        background-color: #4e5977;
+        justify-content: space-between;
     }
 
         #copyRight
         {
-            max-width: 32%;
+            width: 230px;
+            color: white;
+            font-size: clamp(8px, 8vw, 17px);
         }
 
-            #copyRight p
+        #socialMedia
+        {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            #socialMedia li a
             {
-                font-size: 2vw;
+                color: white;
+                font-size: 1.5rem;
+                padding: 0.5em 0.8em;
+                cursor: context-menu;
             }
 
-                #socialMedia li a
+                #social
                 {
-                    font-size: 3.2vw;
+                    transition: 0.3s all;
                 }
-}
 
-/* 
-    Wave Emoji Wave Animation
- */
-@keyframes wave-animation
-{
-    0% { transform: rotate( 0.0deg) }
-    10% { transform: rotate(14.0deg) }  
-    20% { transform: rotate(-8.0deg) }
-    30% { transform: rotate(14.0deg) }
-    40% { transform: rotate(-4.0deg) }
-    50% { transform: rotate(10.0deg) }
-    60% { transform: rotate( 0.0deg) }  
-    100% { transform: rotate( 0.0deg) }
-}
+                #social:hover
+                {
+                    transform: scale(1.5);
+                }    
