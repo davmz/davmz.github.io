@@ -1,0 +1,211 @@
+/* 
+    Reason: Import of Poppins Google Font
+    URL: https://fonts.google.com/specimen/Poppins
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    font-family: "Poppins", sans-serif;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: transparent;
+    transition: background 0.5s ease-in;
+}
+
+/* Set Nav Sticky When Scrolling Down the Webpage */
+.scrollActive
+{
+    transition: 0.5s all;
+    background-color: #3d3d3d8f;
+}
+
+    #navBar
+    {
+        height: 97px;
+        width: 100vw;
+        z-index: 1;
+        display: flex;
+        position: relative;
+        align-items: center;
+        padding: 1.13vh 11.7vw;
+        /* background-color: #4e5977; */
+        justify-content: space-between;
+    }
+
+        #logo
+        {
+            color: white;
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            cursor: context-menu;
+            text-transform: uppercase;
+        }
+
+        /* Burger Menu */
+        .menuBtn
+        {
+            z-index: 1;
+            display: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .menuBtn__lines, .menuBtn__lines::before, .menuBtn__lines::after
+            {
+                width: 1.5rem;
+                height: 0.2rem;
+                background-color: white;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .menuBtn__lines::before, .menuBtn__lines::after
+            {
+                content: "";
+                position: absolute;
+            }
+
+            .menuBtn__lines::before
+            {
+                transform: translateY(-0.5rem);
+            }
+            
+            .menuBtn__lines::after
+            {
+                transform: translateY(0.5rem);
+            }
+
+            /* Burger Menu Animation */
+            .menuBtn.open .menuBtn__lines
+            {
+                background-color: transparent;
+            }
+
+            .menuBtn.open .menuBtn__lines::before
+            {
+                transform: rotate(45deg);
+                background-color: #ffffff;
+            }
+
+            .menuBtn.open .menuBtn__lines::after
+            {
+                transform: rotate(-45deg);
+                background-color: #ffffff;
+            }
+
+        #navList
+        {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            #navList li
+            {
+                list-style: none;
+            }
+
+                #navList li a
+                {
+                    color: white;
+                    font-weight: 500;
+                    font-size: 1.05rem;
+                    padding: 0.5em 1em;
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                    transition: background 0.3s ease-in;
+                }
+
+                #navList li a:hover
+                {
+                    background-color: #8092C3;
+                }
+
+#contentAuthor
+{
+    padding: auto 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../Images/indexBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    #portrait
+    {
+        border: 12px solid white;
+        border-radius: 50%;
+        height: 520px;
+        width: 520px;
+    }
+
+    #potraitInfo
+    {
+        height: 20%;
+        background-color: red;
+    }
+
+footer
+{
+    height: 10vh;
+    display: flex;
+    padding: 0 3em;
+    position: relative;
+    align-items: center;
+    background-color: #4e5977;
+    justify-content: space-between;
+}
+
+#copyRight
+{
+    width: 230px;
+    color: white;
+    font-size: clamp(8px, 8vw, 17px);
+}
+
+#socialMedia
+{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    #socialMedia li a
+    {
+        color: white;
+        font-size: 1.5rem;
+        padding: 0.5em 0.8em;
+        cursor: context-menu;
+    }
+
+        #social
+        {
+            transition: 0.3s all;
+        }
+
+        #social:hover
+        {
+            transform: scale(1.5);
+        }

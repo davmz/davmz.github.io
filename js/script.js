@@ -12,11 +12,25 @@ document.addEventListener("DOMContentLoaded", load);
  */
 function load()
 {
+    stickyNav();
     navSlide(); /* Sets menu bar animation */
 }
 
 /**
- * 
+ * Sticks navigation to top of webpage when scrolling down.
+ */
+function stickyNav()
+{
+    window.addEventListener("scroll", () =>
+    {
+        let header = document.querySelector("header");
+
+        header.classList.toggle("scrollActive", window.scrollY > 0);
+    });
+}
+
+/**
+ * Animates the Menu Bar on click.
  */
 function navSlide()
 {
