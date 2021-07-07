@@ -12,11 +12,39 @@ document.addEventListener("DOMContentLoaded", load);
  */
 function load()
 {
+    /* Sets the webpage back to the top */
+    // backToTop();
+
     /* Sets nav sticky when scrolling */
     stickyNav(); 
 
     /* Sets menu bar animation */
     navSlide(); 
+}
+
+/**
+ * 
+ */
+function backToTop()
+{
+    const backToTopButton = document.querySelector("#backToTop");
+
+    window.addEventListener("scroll", () =>
+    {
+        if(window.pageYOffset > 300) /* or window.scrollY => does not work for all browsers */
+        {
+            backToTopButton.style.display = "block";
+        }
+        else
+        {
+            backToTopButton.style.display = "none";
+        }
+    });
+
+    backToTopButton.addEventListener("click", () =>
+    {
+        window.scrollTo(0, 0);
+    });
 }
 
 /**

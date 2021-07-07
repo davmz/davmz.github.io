@@ -26,6 +26,7 @@ html, body
             letter-spacing: 5px;
             cursor: context-menu;
             text-transform: uppercase;
+            text-shadow: 1px 1px 5px black;
         }
 
     /* Burger Menu */
@@ -207,7 +208,7 @@ html, body
             /* Menu Open Animation */
             #navList.open
             {
-                
+
                 transform: translateX(0);
             }
 

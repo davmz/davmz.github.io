@@ -1,16 +1,95 @@
+/* Back To Top Button */
+#backToTop
+{
+    display: block;
+    position: fixed;
+    /* top: 100px; */
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+}
+
+#backToTop:hover, #backToTop:focus
+{
+    background-color: #333;
+    color: #fff;  
+}
+
+    /* Back To Top Animation */
+    .buttonVisible
+    {
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+        animation-name: buttonVisible;
+    }
+
+    /* Fade In */
+    @keyframes buttonVisible
+    {
+        from
+        {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+
+        to
+        {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    /* Fade Out */
+    .buttonInvisible
+    {
+        animation-duration: 0.25s;
+        animation-fill-mode: both;  
+        animation-name: buttonInvisible;
+    }
+
+    /* fadeOutDown */
+    @keyframes buttonInvisible
+    {
+        from
+        {
+            opacity: 1;
+        }
+
+        to
+        {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+
 header
 {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     background: transparent;
     transition: background 0.5s ease-in;
+    backdrop-filter: blur(6px);
 }
 
 /* Set Nav Sticky When Scrolling Down the Webpage */
 .scrollActive
 {
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
     transition: 0.5s all;
     background-color: #3d3d3d8f;
 }
@@ -55,6 +134,26 @@ header
         max-width: 50%;
         background-color: red;
     }
+
+#liveByVerses
+{
+    padding: 14vh 12vw;
+    height: 100%;
+    background-color: rgb(160, 123, 160);
+}
+
+#aboutTopics
+{
+    padding: 14vh 12vw;
+    height:  100%;
+    background-color: orange;
+}
+
+#contentInfo
+{
+    height: 100%;
+    padding: 16vh 14vw;
+}
 
 footer
 {
@@ -112,6 +211,18 @@ footer
             /* width: clamp(500px, 21vw, 2rem); */
             padding: 0;
         }
+}
+
+@media only screen and (max-width: 768px)
+{
+    #backToTop
+    {
+        font-size: 18px;
+        width: 32px;
+        height: 32px;
+        bottom: 6px; 
+        right: 6px;
+    }
 }
 
 /* Temporary */
