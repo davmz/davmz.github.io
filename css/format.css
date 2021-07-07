@@ -229,8 +229,8 @@ html, body
                     #navList li a
                     {
                         display: flex;
-                        font-size: 5vh;
-                        padding: 1rem 2rem;
+                        font-size: 7vw;
+                        padding: 1rem 1.5rem;
                         align-items: center;
                         letter-spacing: 4px;
                         justify-content: center;
