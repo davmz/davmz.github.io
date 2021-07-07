@@ -135,15 +135,21 @@ footer
 
 @media only screen and (max-width: 700px)
 {
+    section
+    {
+        height: 82vh;
+    }
+
     footer
     {
-        height: 10vh;
-        padding: 1vh 8vw;
+        height: 8vh;
+        padding: 1vh 5vw;
     }
 
         #copyRight
         {
-            max-width: 32%;
+            /* background-color: red;
+            width: clamp(100%, 20vw, 300px) */
         }
 
             #copyRight p
