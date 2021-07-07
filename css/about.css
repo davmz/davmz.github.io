@@ -215,6 +215,16 @@ footer
 
 @media only screen and (max-width: 768px)
 {
+    footer
+    {
+        padding: 1vh 8vw;
+    }
+
+        #copyRight
+        {
+            font-size: 1.5vh;
+        }
+
     #backToTop
     {
         font-size: 18px;
@@ -231,7 +241,7 @@ footer
     footer
     {
         height: 10vh;
-        padding: 1vh 8vw;
+        padding: 1vh 5vw;
     }
 
         #copyRight

@@ -146,12 +146,6 @@ footer
         padding: 1vh 5vw;
     }
 
-        #copyRight
-        {
-            /* background-color: red;
-            width: clamp(100%, 20vw, 300px) */
-        }
-
             #copyRight p
             {
                 font-size: 2vw;
