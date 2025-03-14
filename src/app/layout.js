@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         className={`flex flex-col min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Nav />
-          <div className="flex flex-grow flex-col">
+          <div className="pt-16 flex flex-grow flex-col">
             {children}
           </div>
         <Footer />
