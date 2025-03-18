@@ -5,7 +5,7 @@ export default function VerseOfTheDay() {
             <div className="p-4 rounded-lg border bg-card">
                 <p className="text-muted-foreground">
                     {/* Replace this with a dynamic API call to fetch the verse */}
-                    "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future." - Jeremiah 29:11
+                    &quot;For I know the plans I have for you,&quot; declares the Lord, &quot;plans to prosper you and not to harm you, plans to give you hope and a future.&quot; - Jeremiah 29:11
                 </p>
             </div>
             <p className="text-muted-foreground">
