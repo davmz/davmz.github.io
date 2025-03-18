@@ -4,7 +4,7 @@ export const typewriterData = [
     "A RRC BIT Graduate",
     "A problem solver",
     "A quick learner",
-    "A persona who googles things professionally",
+    "A person who googles things professionally",
     "A master of ctrl+c and ctrl+v",
     "A future tech influencer (maybe?? 🤷‍♂️)",
     "A photographer 📸",
@@ -23,8 +23,9 @@ export const typewriterData = [
     "Go ahead, click more...",
     "Resetting Loop",
     "Infinite Loop",
-    "In",
-    "3",
-    "2",
-    "1"
+    "In...",
+    "3...",
+    "2..",
+    "1...",
+    "..."
 ];
