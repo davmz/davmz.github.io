@@ -1,87 +1,88 @@
 'use client';
 
 // import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-// import { Badge } from '../../../components/ui/Badge';
+import { Badge } from '../../../components/ui/Badge';
 // import { Progress } from '@/components/ui/progress';
 import { Code2, Database, Wrench, Brain, Award, BookOpen, PenTool as Tool, Laptop } from 'lucide-react';
 import { Progress } from '../../../components/ui/Progress';
+import { Card, CardContent, CardHeader, CardTitle } from '../../../components/ui/Card';
 
 export default function SkillsPage() {
     const skills = {
-    frontend: [
-        { name: 'React/Next.js', level: 95 },
-        { name: 'JavaScript/TypeScript', level: 90 },
-        { name: 'HTML5/CSS3', level: 95 },
-        { name: 'Tailwind CSS', level: 90 },
-        { name: 'Redux/Context API', level: 85 },
-        { name: 'Responsive Design', level: 95 },
-    ],
-    backend: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 80 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'PostgreSQL', level: 70 },
-        { name: 'RESTful APIs', level: 90 },
-        { name: 'GraphQL', level: 65 },
-    ],
-    tools: [
-        'Git & GitHub',
-        'VS Code',
-        'Docker',
-        'Webpack',
-        'Jest',
-        'Postman',
-        'Figma',
-        'Adobe XD',
-    ],
-    softSkills: [
-        'Problem Solving',
-        'Team Leadership',
-        'Communication',
-        'Time Management',
-        'Agile Methodology',
-        'Project Planning',
-    ],
-    certifications: [
-        {
-        name: 'AWS Certified Developer',
-        issuer: 'Amazon Web Services',
-        date: '2023',
-        status: 'completed',
-        },
-        {
-        name: 'Google Cloud Professional',
-        issuer: 'Google',
-        date: '2023',
-        status: 'completed',
-        },
-    ],
-    ongoing: [
-        {
-        name: 'Machine Learning Specialization',
-        platform: 'Coursera',
-        progress: 60,
-        },
-        {
-        name: 'Blockchain Development',
-        platform: 'Udacity',
-        progress: 40,
-        },
-    ],
-    tools_software: [
-        {
-        category: 'Development',
-        items: ['VS Code', 'WebStorm', 'Git', 'Docker', 'Postman'],
-        },
-        {
-        category: 'Design',
-        items: ['Figma', 'Adobe XD', 'Sketch', 'Photoshop'],
-        },
-        {
-        category: 'Project Management',
-        items: ['Jira', 'Trello', 'Notion', 'Slack'],
-        },
-    ],
+        frontend: [
+            { name: 'React/Next.js', level: 95 },
+            { name: 'JavaScript/TypeScript', level: 90 },
+            { name: 'HTML5/CSS3', level: 95 },
+            { name: 'Tailwind CSS', level: 90 },
+            { name: 'Redux/Context API', level: 85 },
+            { name: 'Responsive Design', level: 95 },
+        ],
+        backend: [
+            { name: 'Node.js', level: 85 },
+            { name: 'Express.js', level: 80 },
+            { name: 'MongoDB', level: 75 },
+            { name: 'PostgreSQL', level: 70 },
+            { name: 'RESTful APIs', level: 90 },
+            { name: 'GraphQL', level: 65 },
+        ],
+        tools: [
+            'Git & GitHub',
+            'VS Code',
+            'Docker',
+            'Webpack',
+            'Jest',
+            'Postman',
+            'Figma',
+            'Adobe XD',
+        ],
+        softSkills: [
+            'Problem Solving',
+            'Team Leadership',
+            'Communication',
+            'Time Management',
+            'Agile Methodology',
+            'Project Planning',
+        ],
+        certifications: [
+            {
+            name: 'AWS Certified Developer',
+            issuer: 'Amazon Web Services',
+            date: '2023',
+            status: 'completed',
+            },
+            {
+            name: 'Google Cloud Professional',
+            issuer: 'Google',
+            date: '2023',
+            status: 'completed',
+            },
+        ],
+        ongoing: [
+            {
+            name: 'Machine Learning Specialization',
+            platform: 'Coursera',
+            progress: 60,
+            },
+            {
+            name: 'Blockchain Development',
+            platform: 'Udacity',
+            progress: 40,
+            },
+        ],
+        tools_software: [
+            {
+            category: 'Development',
+            items: ['VS Code', 'WebStorm', 'Git', 'Docker', 'Postman'],
+            },
+            {
+            category: 'Design',
+            items: ['Figma', 'Adobe XD', 'Sketch', 'Photoshop'],
+            },
+            {
+            category: 'Project Management',
+            items: ['Jira', 'Trello', 'Notion', 'Slack'],
+            },
+        ],
     };
 
     return (
@@ -136,7 +137,7 @@ export default function SkillsPage() {
                 </section>
 
                 {/* Tools & Software */}
-                {/* <section className="space-y-6">
+                <section className="space-y-6">
                     <div className="flex items-center gap-2">
                         <Tool className="h-6 w-6 text-primary" />
                         <h2 className="text-2xl font-semibold">Tools & Software</h2>
@@ -161,7 +162,7 @@ export default function SkillsPage() {
                             </Card>
                         ))}
                     </div>
-                </section> */}
+                </section>
 
                 {/* Soft Skills */}
                 <section className="space-y-6">
@@ -183,7 +184,7 @@ export default function SkillsPage() {
                 </section>
 
                 {/* Certifications */}
-                {/* <section className="space-y-6">
+                <section className="space-y-6">
                     <div className="flex items-center gap-2">
                         <Award className="h-6 w-6 text-primary" />
                         <h2 className="text-2xl font-semibold">Certifications</h2>
@@ -203,10 +204,10 @@ export default function SkillsPage() {
                             </Card>
                         ))}
                     </div>
-                </section> */}
+                </section>
 
                 {/* Currently Learning */}
-                {/* <section className="space-y-6">
+                <section className="space-y-6">
                     <div className="flex items-center gap-2">
                         <BookOpen className="h-6 w-6 text-primary" />
                         <h2 className="text-2xl font-semibold">Currently Learning</h2>
@@ -233,7 +234,7 @@ export default function SkillsPage() {
                             </Card>
                         ))}
                     </div>
-                </section> */}
+                </section>
             </div>
         </div>
     );
