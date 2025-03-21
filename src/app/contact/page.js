@@ -4,7 +4,7 @@ import SocialMediaCard from "../../../components/ui/SocialMediaCard";
 
 export default function Contact() {
     return (
-        <div className="relative flex flex-col flex-grow items-start p-6 md:px-44">
+        <div className="relative flex flex-col flex-grow items-start p-6 md:px-52">
             <section className="w-full">
                 <h1 className="text-3xl font-bold text-left py-5 text-cyan-500">Get In Touch</h1>
 

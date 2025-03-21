@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X, Moon, Sun } from "lucide-react";
 
@@ -39,11 +38,11 @@ export default function Navbar() {
 
     const navigation = [
         { name: 'Home', href: '/' },
-        { name: 'About', href: '/about' },
-        { name: 'Skills', href: '/skills' },
-        { name: 'Experiences', href: '/experiences' },
-        { name: 'Projects', href: '/projects' },
-        { name: 'Contact', href: '/contact' },
+        { name: 'About', href: '/about/' },
+        { name: 'Skills', href: '/skills/' },
+        { name: 'Experiences', href: '/experiences/' },
+        { name: 'Projects', href: '/projects/' },
+        { name: 'Contact', href: '/contact/' },
     ];
 
     const isActive = (path) => pathname === path;
@@ -68,62 +67,64 @@ export default function Navbar() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex md:items-center md:space-x-6">
-                    {navigation.map((item) => (
-                        <Link
-                        key={item.name}
-                        href={item.href}
-                        className={`px-3 py-2 text-sm font-medium transition-colors duration-300 rounded-md ${
-                            isActive(item.href)
-                            ? 'bg-white text-black font-semibold'
-                            : 'text-muted-foreground hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-primary'
-                        }`}
+                        {navigation.map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className={`px-3 py-2 text-sm font-medium transition-colors duration-300 rounded-md ${
+                                isActive(item.href)
+                                    ? 'bg-white text-black font-semibold'
+                                    : 'text-muted-foreground hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-primary'
+                                }`}
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            aria-label="Toggle theme"
                         >
-                        {item.name}
-                        </Link>
-                    ))}
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        aria-label="Toggle theme"
-                    >
-                        {mounted && (
-                        <>
-                            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                        </>
-                        )}
-                    </Button>
+                            {mounted && (
+                                <>
+                                    <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                                    <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                                </>
+                            )}
+                        </Button>
                     </div>
 
                     {/* Mobile Navigation Button */}
                     <div className="flex items-center md:hidden">
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        className="mr-2"
-                        aria-label="Toggle theme"
-                    >
-                        {mounted && (
-                        <>
-                            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                        </>
-                        )}
-                    </Button>
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setIsOpen(!isOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        {isOpen ? (
-                        <X className="h-6 w-6" />
-                        ) : (
-                        <Menu className="h-6 w-6" />
-                        )}
-                    </Button>
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            className="mr-2"
+                            aria-label="Toggle theme"
+                        >
+                            {mounted && (
+                            <>
+                                <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                                <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                            </>
+                            )}
+                        </Button>
+
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => setIsOpen(!isOpen)}
+                            aria-label="Toggle menu"
+                        >
+                            {isOpen ? (
+                                <X className="h-6 w-6" />
+                            ) : (
+                                <Menu className="h-6 w-6" />
+                            )}
+                        </Button>
                     </div>
                 </div>
             </div>
