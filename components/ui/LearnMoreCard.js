@@ -5,7 +5,6 @@ export default function LearnMoreCardButton({ title, description, href }) {
   return (
     <Link
       href={href}
-      target="_blank"
       rel="noopener noreferrer"
       className="bg-gray-900 text-white p-5 md:p-6 rounded-lg shadow-lg w-full md:w-1/3 flex flex-col border border-gray-700 transition-all duration-300 transform sm:hover:scale-102 hover:scale-105 hover:shadow-[0_0_15px_5px_rgb(0,184,219,0.7)] hover:border-gray-700 hover:bg-black"
     >
