@@ -10,10 +10,11 @@ export default function Home() {
   return (
     <div className="relative flex flex-col flexgrow justify-center items-center py-5 md:px-52 md:pt-10">
       <div className="background-image"></div>
+
       <div className="content-wrapper">
         <section className="flex flex-col md:flex-row justify-evenly items-center w-full gap-5 md:gap-10 p-5 md:p-10">
-            <div className="text-center md:text-left">
-              <div className="text-xl md:text-4xl font-semibold text-cyan-500 mb-4">
+          <div className="text-center md:text-left">
+            <div className="text-xl md:text-4xl font-semibold text-cyan-500 mb-4">
               <TypeWriterComponent
                 isLoop={true}
                 typeSpeed={70}
@@ -63,20 +64,19 @@ export default function Home() {
           <LearnMoreCardButton
             title="Skills"
             description="Explore my technical expertise and capabilities"
-            href="
-            /skills"
+            href="/skills"
           />
 
           <LearnMoreCardButton
             title="Experience"
-            description="Professional journey and achievements"
             href="/experiences"
+            description="Professional journey and achievements"
           />
 
           <LearnMoreCardButton
             title="Projects"
-            description="Explore my latest work and contributions"
             href="/projects"
+            description="Explore my latest work and contributions"
           />
         </section>
       </div>
