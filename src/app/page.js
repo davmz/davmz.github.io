@@ -31,17 +31,17 @@ export default function Home() {
 
               <div className="flex flex-col md:flex-row gap-2 mt-4">
                 <Button
-                  variant="primary"
-                  size="default"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  variant="default"
+                  size="lg"
+                  url="/about/"
                 >
                   Learn More
                 </Button>
 
                 <Button
-                  variant="link"
-                  size="full"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  variant="secondary"
+                  size="lg"
+                  url="/contact/"
                 >
                   Contact Me
                 </Button>

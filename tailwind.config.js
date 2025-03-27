@@ -7,8 +7,6 @@ module.exports = {
       "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
       "./public/**/*.html"
     ],
-    theme: {
-      extend: {},
-    },
+    theme: {},
     plugins: [],
 };
