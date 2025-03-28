@@ -2,16 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import AboutMe from "./components/AboutMe";
 import Banner from "./components/Banner";
-import FutureGoals from "./components/FutureGoals";
+import AboutMe from "./components/AboutMe";
 import Hobbies from "./components/Hobbies";
 import Overview from "./components/Overview";
+import FutureGoals from "./components/FutureGoals";
 import Photography from "./components/Photography";
 import RandomFacts from "./components/RandomFacts";
 import VerseOfTheDay from "./components/VerseOfTheDay";
 
 import ScrollToTop from "../../../components/ui/ScrollToTop";
+import SectionFade from "../../../components/ui/SectionFade";
 
 export default function About() {
     const sectionRefs = [
@@ -42,13 +43,13 @@ export default function About() {
 
             setTimeout(() => {
                 scrolling.current = false;
-            }, 1000); // throttle scroll (adjust for faster/slower)
+            }, 500); // throttle scroll (adjust for faster/slower)
         };
 
         window.addEventListener("wheel", handleWheel);
 
         return () => {
-                window.removeEventListener("wheel", handleWheel);
+                window.removeEventListener("wheel", handleWheel);screenTop
             };
     }, [currentSection]);
 
@@ -58,55 +59,71 @@ export default function About() {
 
     return (
         <>
-      <section ref={sectionRefs[0]} className="h-screen">
-        <div className="h-full container mx-auto px-4 py-12">
-          <Banner />
-        </div>
-      </section>
+            <section ref={sectionRefs[0]} className="h-screen scroll-mt-16 bg-red-700">
+                <div className="h-full container mx-auto px-4 py-12">
+                    <SectionFade isActive={currentSection === 0}>
+                        <Banner />
+                    </SectionFade>
+                </div>
+            </section>
 
-      <section ref={sectionRefs[1]} className="h-screen">
-        <div className="h-full container mx-auto px-4 py-12">
-          <Overview />
-        </div>
-      </section>
+            <section ref={sectionRefs[1]} className="h-screen scroll-mt-16 bg-orange-700">
+                <div className="h-full container mx-auto px-4 py-12">
+                    <SectionFade isActive={currentSection === 1}>
+                        <Overview />
+                    </SectionFade>
+                </div>
+            </section>
 
-      <section ref={sectionRefs[2]} className="h-screen">
-        <div className="h-full container mx-auto px-4 py-12">
-          <AboutMe />
-        </div>
-      </section>
+            <section ref={sectionRefs[2]} className="h-screen scroll-mt-16 bg-yellow-700">
+                <div className="h-full container mx-auto px-4 py-12">
+                    <SectionFade isActive={currentSection === 2}>
+                        <AboutMe />
+                    </SectionFade>
+                </div>
+            </section>
 
-      <section ref={sectionRefs[3]} className="h-screen">
-        <div className="h-full container mx-auto px-4 py-12">
-          <Photography />
-        </div>
-      </section>
+            <section ref={sectionRefs[3]} className="h-screen scroll-mt-16 bg-green-700">
+                <div className="h-full container mx-auto px-4 py-12">
+                    <SectionFade isActive={currentSection === 3}>
+                        <Photography />
+                    </SectionFade>
+                </div>
+            </section>
 
-      <section ref={sectionRefs[4]} className="h-screen">
-        <div className="h-full container mx-auto px-4 py-12">
-          <VerseOfTheDay />
-        </div>
-      </section>
+            <section ref={sectionRefs[4]} className="h-screen scroll-mt-16 bg-blue-700">
+                <div className="h-full container mx-auto px-4 py-12">
+                    <SectionFade isActive={currentSection === 4}>
+                        <VerseOfTheDay />
+                    </SectionFade>
+                </div>
+            </section>
 
-      <section ref={sectionRefs[5]} className="h-screen">
-        <div className="h-full container mx-auto px-4 py-12">
-          <Hobbies />
-        </div>
-      </section>
+            <section ref={sectionRefs[5]} className="h-screen scroll-mt-16 bg-indigo-700">
+                <div className="h-full container mx-auto px-4 py-12">
+                    <SectionFade isActive={currentSection === 5}>
+                        <Hobbies />
+                    </SectionFade>
+                </div>
+            </section>
 
-      <section ref={sectionRefs[6]} className="h-screen">
-        <div className="h-full container mx-auto px-4 py-12">
-          <FutureGoals />
-        </div>
-      </section>
+            <section ref={sectionRefs[6]} className="h-screen scroll-mt-16 bg-purple-700">
+                <div className="h-full container mx-auto px-4 py-12">
+                    <SectionFade isActive={currentSection === 6}>
+                        <FutureGoals />
+                    </SectionFade>
+                </div>
+            </section>
 
-      <section ref={sectionRefs[7]} className="h-screen">
-        <div className="h-full container mx-auto px-4 py-12">
-          <RandomFacts />
-        </div>
-      </section>
+            <section ref={sectionRefs[7]} className="h-screen scroll-mt-16 bg-amber-700">
+                <div className="h-full container mx-auto px-4 py-12">
+                    <SectionFade isActive={currentSection === 7}>
+                        <RandomFacts />
+                    </SectionFade>
+                </div>
+            </section>
 
-        <ScrollToTop onResetSection={() => setCurrentSection(0)} />
-      </>
+            <ScrollToTop onResetSection={() => setCurrentSection(0)} />
+        </>
     );
 }
